@@ -1,0 +1,26 @@
+<html>
+  <header>
+
+   
+    <script src="./bundle.js" type="text/javascript"></script>
+  </header>
+  <body>
+     <script type="text/javascript">
+      console.log(window.QtumWallet,'QtumWallet')
+      const { networks, generateMnemonic } = QtumWallet;
+      const network = networks.testnet;
+      const mnemonic = generateMnemonic();
+      const password = "covfefe";
+
+      const wallet = network.fromMnemonic(mnemonic, password);
+
+      console.log("mnemonic:", mnemonic);
+      console.log("public address:", wallet.address);
+      console.log("private key (WIF):", wallet.toWIF());
+
+      alert(`generated a random ${wallet.address}`)
+
+     </script>
+  </body>
+  
+</html>
