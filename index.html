@@ -7,7 +7,8 @@
   <body>
      <script type="text/javascript">
       console.log(window.QtumWallet,'QtumWallet')
-      const { networks, generateMnemonic } = QtumWallet;
+   
+      const { networks, generateMnemonic } = window.QtumWallet;
       const network = networks.testnet;
       const mnemonic = generateMnemonic();
       const password = "covfefe";
